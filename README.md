@@ -7,9 +7,9 @@
 - Uses the quick-xml and Serde to read the XML file's data and create a Json file based on the structs.
 - Converts the Json file back into XML using a recursive function. The recursive function is not dependent on the structs.
 
-## The generated XML file might have fewer rows than the original XML file:
+## The generated XML file might have more rows than the original XML file:
 
-#### These are not exactly bugs, since the generated file will still contain all the relevant information from the original file.
+#### When converting from XML to JSON and then back to XML, the generated XML file might have additional rows, even though it contains the correct data from the original file.
 
 - <ts:TreeStandDataDate> tags that don't have any content will be written on two rows instead of one.
 
