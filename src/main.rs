@@ -1,13 +1,13 @@
 use forestry_structs::file_structs::ForestPropertyData as FileForestPropertyData;
 use forestry_structs::url_structs::ForestPropertyData as UrlForestPropertyData;
-use schema_generator::create_structs::{create_structs, create_structs_and_save_to_file};
+use schema_generator::create_structs::create_structs_and_save_to_file;
 use schema_generator::json_utils::json_keys_to_lowercase;
 use schema_generator::generate_xml::json_to_xml;
 
 use quick_xml::de::from_str;
 use reqwest::blocking::get;
 use std::fs::File;
-use std::io::{Read, Write};
+use std::io::Read;
 use std::str;
 use std::fs;
 use dotenv::dotenv;

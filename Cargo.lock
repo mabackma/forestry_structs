@@ -187,7 +187,6 @@ dependencies = [
  "schema_generator",
  "serde",
  "serde_json",
- "toml",
 ]
 
 [[package]]
@@ -928,14 +927,12 @@ dependencies = [
 
 [[package]]
 name = "schema_generator"
-version = "0.1.9"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "db442cbe22c15cc94bbbb95357443f81f3d8f10b44f1d84301a66f562c540778"
+checksum = "b9c25ae193c67331f1eb464e749fe86926a425a0d77bfb24908c390db93e714a"
 dependencies = [
- "dotenv",
  "quick-xml",
  "regex",
- "reqwest",
  "serde",
  "serde-xml-rs",
  "serde_json",
