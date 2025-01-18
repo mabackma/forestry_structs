@@ -1,6 +1,6 @@
 use forestry_structs::file_structs::ForestPropertyData as FileForestPropertyData;
 use forestry_structs::url_structs::ForestPropertyData as UrlForestPropertyData;
-use schema_generator::create_structs::create_structs;
+use schema_generator::create_structs::{create_structs, create_structs_and_save_to_file};
 use schema_generator::json_utils::json_keys_to_lowercase;
 use schema_generator::generate_xml::json_to_xml;
 
@@ -79,22 +79,6 @@ fn fetch_xml_url(url: &str) -> Option<String> {
             None
         }
     }
-}
-
-// Creates structs from an XML string and saves them to a file
-fn create_structs_and_save_to_file(
-    xml_string: &str, 
-    file_name: &str
-) {
-
-    // Create string representation of structs from the XML string
-    let struct_string = create_structs(xml_string);
-
-    // Save the generated structs to a file
-    let mut struct_file = File::create(file_name).unwrap();
-    struct_file.write_all(&struct_string.as_bytes()).unwrap();
-
-    println!("Structs saved to {}\n", file_name);
 }
 
 // Reads XML content from a file and converts it to structs according to the schema

@@ -928,9 +928,9 @@ dependencies = [
 
 [[package]]
 name = "schema_generator"
-version = "0.1.8"
+version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "44101d1590591fe5af30aba85b9ff44558aa748432df82eb65199ba7408ad4f9"
+checksum = "db442cbe22c15cc94bbbb95357443f81f3d8f10b44f1d84301a66f562c540778"
 dependencies = [
  "dotenv",
  "quick-xml",
