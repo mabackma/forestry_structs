@@ -17,7 +17,7 @@ fn main() {
 
     // Create structs schema from a file
     let file_xml_string = read_xml_file("./XML_Metsävarakuviot/XML_MV_V4314F.xml");
-    create_structs_and_save_to_file(&file_xml_string, "src/file_structs.rs");
+    create_structs_and_save_to_file(&file_xml_string, "src/file_structs.rs", true);
 
     // Convert the file XML content to structs according to the schema
     let file_property: FileForestPropertyData = file_content_to_structs("./XML_Metsävarakuviot/XML_MV_V4314F.xml");
@@ -26,7 +26,7 @@ fn main() {
     dotenv().ok();
     let url = env::var("API_URL").unwrap();
     let url_xml_string = fetch_xml_url(&url).unwrap();
-    create_structs_and_save_to_file(&url_xml_string, "src/url_structs.rs");
+    create_structs_and_save_to_file(&url_xml_string, "src/url_structs.rs", true);
 
     // Convert the URL XML content to structs according to the schema
     let url_property: UrlForestPropertyData = from_str(&url_xml_string).expect("Could not parse the XML");

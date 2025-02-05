@@ -1,18 +1,101 @@
-// Generated with schema_generator 0.2.3
+// Generated with schema_generator 0.2.4
+use schema_generator::number::{Number, deserialize_optional_number};
 use serde::{Serialize, Deserialize};
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct StStand {
+pub struct TssTreeStandSummary {
 	#[serde(rename = "@id")]
 	pub id: String,
 	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
 	pub text: Option<String>,
-	#[serde(rename = "StandBasicData", skip_serializing_if = "Option::is_none")]
-	pub st_stand_basic_data: Option<StStandBasicData>,
-	#[serde(rename = "TreeStandData", skip_serializing_if = "Option::is_none")]
-	pub ts_tree_stand_data: Option<TsTreeStandData>,
-	#[serde(rename = "SpecialFeatures", skip_serializing_if = "Option::is_none")]
-	pub st_special_features: Option<StSpecialFeatures>,
+	#[serde(rename = "MeanAge", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_mean_age: Option<Number>,
+	#[serde(rename = "BasalArea", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_basal_area: Option<Number>,
+	#[serde(rename = "StemCount", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_stem_count: Option<Number>,
+	#[serde(rename = "MeanDiameter", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_mean_diameter: Option<Number>,
+	#[serde(rename = "MeanHeight", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_mean_height: Option<Number>,
+	#[serde(rename = "Volume", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_volume: Option<Number>,
+	#[serde(rename = "SawLogVolume", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_saw_log_volume: Option<Number>,
+	#[serde(rename = "PulpWoodVolume", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_pulp_wood_volume: Option<Number>,
+	#[serde(rename = "VolumeGrowth", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_volume_growth: Option<Number>,
+	#[serde(rename = "LeafBiomass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_leaf_biomass: Option<Number>,
+	#[serde(rename = "BranchBiomass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_branch_biomass: Option<Number>,
+	#[serde(rename = "StemBiomass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_stem_biomass: Option<Number>,
+	#[serde(rename = "StumpBiomass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_stump_biomass: Option<Number>,
+	#[serde(rename = "DevelopmentClass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_development_class: Option<Number>,
+	#[serde(rename = "MainTreeSpecies", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tss_main_tree_species: Option<Number>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct StStands {
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "Stand", skip_serializing_if = "Option::is_none")]
+	pub st_stand: Option<Vec<StStand>>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct StIdentifier {
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "IdentifierType", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub co_identifier_type: Option<Number>,
+	#[serde(rename = "IdentifierValue", skip_serializing_if = "Option::is_none")]
+	pub co_identifier_value: Option<String>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct TstTreeStratum {
+	#[serde(rename = "@id")]
+	pub id: String,
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "StratumNumber", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_stratum_number: Option<Number>,
+	#[serde(rename = "TreeSpecies", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_tree_species: Option<Number>,
+	#[serde(rename = "Storey", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_storey: Option<Number>,
+	#[serde(rename = "Age", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_age: Option<Number>,
+	#[serde(rename = "BasalArea", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_basal_area: Option<Number>,
+	#[serde(rename = "MeanDiameter", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_mean_diameter: Option<Number>,
+	#[serde(rename = "MeanHeight", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_mean_height: Option<Number>,
+	#[serde(rename = "Volume", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_volume: Option<Number>,
+	#[serde(rename = "StemCount", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_stem_count: Option<Number>,
+	#[serde(rename = "SawLogVolume", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_saw_log_volume: Option<Number>,
+	#[serde(rename = "PulpWoodVolume", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_pulp_wood_volume: Option<Number>,
+	#[serde(rename = "VolumeGrowth", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_volume_growth: Option<Number>,
+	#[serde(rename = "LeafBiomass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_leaf_biomass: Option<Number>,
+	#[serde(rename = "BranchBiomass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_branch_biomass: Option<Number>,
+	#[serde(rename = "StemBiomass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_stem_biomass: Option<Number>,
+	#[serde(rename = "StumpBiomass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub tst_stump_biomass: Option<Number>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -30,77 +113,11 @@ pub struct TsTreeStandDataDate {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct GmlPoint {
-	#[serde(rename = "@srsName", skip_serializing_if = "Option::is_none")]
-	pub srs_name: Option<String>,
+pub struct GmlpolygonProperty {
 	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
 	pub text: Option<String>,
-	#[serde(rename = "coordinates", skip_serializing_if = "Option::is_none")]
-	pub gml_coordinates: Option<String>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct StIdentifier {
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "IdentifierType", skip_serializing_if = "Option::is_none")]
-	pub co_identifier_type: Option<String>,
-	#[serde(rename = "IdentifierValue", skip_serializing_if = "Option::is_none")]
-	pub co_identifier_value: Option<String>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct StSpecialFeature {
-	#[serde(rename = "@id")]
-	pub id: String,
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "MainFeature", skip_serializing_if = "Option::is_none")]
-	pub sf_main_feature: Option<String>,
-	#[serde(rename = "FeatureCode", skip_serializing_if = "Option::is_none")]
-	pub sf_feature_code: Option<String>,
-	#[serde(rename = "FeatureAdditionalCode", skip_serializing_if = "Option::is_none")]
-	pub sf_feature_additional_code: Option<String>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct TstTreeStratum {
-	#[serde(rename = "@id")]
-	pub id: String,
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "StratumNumber", skip_serializing_if = "Option::is_none")]
-	pub tst_stratum_number: Option<String>,
-	#[serde(rename = "TreeSpecies", skip_serializing_if = "Option::is_none")]
-	pub tst_tree_species: Option<String>,
-	#[serde(rename = "Storey", skip_serializing_if = "Option::is_none")]
-	pub tst_storey: Option<String>,
-	#[serde(rename = "Age", skip_serializing_if = "Option::is_none")]
-	pub tst_age: Option<String>,
-	#[serde(rename = "BasalArea", skip_serializing_if = "Option::is_none")]
-	pub tst_basal_area: Option<String>,
-	#[serde(rename = "MeanDiameter", skip_serializing_if = "Option::is_none")]
-	pub tst_mean_diameter: Option<String>,
-	#[serde(rename = "MeanHeight", skip_serializing_if = "Option::is_none")]
-	pub tst_mean_height: Option<String>,
-	#[serde(rename = "Volume", skip_serializing_if = "Option::is_none")]
-	pub tst_volume: Option<String>,
-	#[serde(rename = "StemCount", skip_serializing_if = "Option::is_none")]
-	pub tst_stem_count: Option<String>,
-	#[serde(rename = "SawLogVolume", skip_serializing_if = "Option::is_none")]
-	pub tst_saw_log_volume: Option<String>,
-	#[serde(rename = "PulpWoodVolume", skip_serializing_if = "Option::is_none")]
-	pub tst_pulp_wood_volume: Option<String>,
-	#[serde(rename = "VolumeGrowth", skip_serializing_if = "Option::is_none")]
-	pub tst_volume_growth: Option<String>,
-	#[serde(rename = "LeafBiomass", skip_serializing_if = "Option::is_none")]
-	pub tst_leaf_biomass: Option<String>,
-	#[serde(rename = "BranchBiomass", skip_serializing_if = "Option::is_none")]
-	pub tst_branch_biomass: Option<String>,
-	#[serde(rename = "StemBiomass", skip_serializing_if = "Option::is_none")]
-	pub tst_stem_biomass: Option<String>,
-	#[serde(rename = "StumpBiomass", skip_serializing_if = "Option::is_none")]
-	pub tst_stump_biomass: Option<String>,
+	#[serde(rename = "Polygon", skip_serializing_if = "Option::is_none")]
+	pub gml_polygon: Option<GmlPolygon>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -112,11 +129,19 @@ pub struct GmlpointProperty {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Gmlexterior {
+pub struct StIdentifiers {
 	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
 	pub text: Option<String>,
-	#[serde(rename = "LinearRing", skip_serializing_if = "Option::is_none")]
-	pub gml_linear_ring: Option<GmlLinearRing>,
+	#[serde(rename = "Identifier", skip_serializing_if = "Option::is_none")]
+	pub st_identifier: Option<Vec<StIdentifier>>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct TstTreeStrata {
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "TreeStratum", skip_serializing_if = "Option::is_none")]
+	pub tst_tree_stratum: Option<Vec<TstTreeStratum>>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -127,144 +152,6 @@ pub struct GdtPolygonGeometry {
 	pub gml_point_property: Option<GmlpointProperty>,
 	#[serde(rename = "polygonProperty", skip_serializing_if = "Option::is_none")]
 	pub gml_polygon_property: Option<GmlpolygonProperty>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct TsTreeStandData {
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "TreeStandDataDate", skip_serializing_if = "Option::is_none")]
-	pub ts_tree_stand_data_date: Option<Vec<TsTreeStandDataDate>>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct StStands {
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "Stand", skip_serializing_if = "Option::is_none")]
-	pub st_stand: Option<Vec<StStand>>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct TssTreeStandSummary {
-	#[serde(rename = "@id")]
-	pub id: String,
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "MeanAge", skip_serializing_if = "Option::is_none")]
-	pub tss_mean_age: Option<String>,
-	#[serde(rename = "BasalArea", skip_serializing_if = "Option::is_none")]
-	pub tss_basal_area: Option<String>,
-	#[serde(rename = "StemCount", skip_serializing_if = "Option::is_none")]
-	pub tss_stem_count: Option<String>,
-	#[serde(rename = "MeanDiameter", skip_serializing_if = "Option::is_none")]
-	pub tss_mean_diameter: Option<String>,
-	#[serde(rename = "MeanHeight", skip_serializing_if = "Option::is_none")]
-	pub tss_mean_height: Option<String>,
-	#[serde(rename = "Volume", skip_serializing_if = "Option::is_none")]
-	pub tss_volume: Option<String>,
-	#[serde(rename = "SawLogVolume", skip_serializing_if = "Option::is_none")]
-	pub tss_saw_log_volume: Option<String>,
-	#[serde(rename = "PulpWoodVolume", skip_serializing_if = "Option::is_none")]
-	pub tss_pulp_wood_volume: Option<String>,
-	#[serde(rename = "VolumeGrowth", skip_serializing_if = "Option::is_none")]
-	pub tss_volume_growth: Option<String>,
-	#[serde(rename = "LeafBiomass", skip_serializing_if = "Option::is_none")]
-	pub tss_leaf_biomass: Option<String>,
-	#[serde(rename = "BranchBiomass", skip_serializing_if = "Option::is_none")]
-	pub tss_branch_biomass: Option<String>,
-	#[serde(rename = "StemBiomass", skip_serializing_if = "Option::is_none")]
-	pub tss_stem_biomass: Option<String>,
-	#[serde(rename = "StumpBiomass", skip_serializing_if = "Option::is_none")]
-	pub tss_stump_biomass: Option<String>,
-	#[serde(rename = "DevelopmentClass", skip_serializing_if = "Option::is_none")]
-	pub tss_development_class: Option<String>,
-	#[serde(rename = "MainTreeSpecies", skip_serializing_if = "Option::is_none")]
-	pub tss_main_tree_species: Option<String>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct GmlPolygon {
-	#[serde(rename = "@srsName", skip_serializing_if = "Option::is_none")]
-	pub srs_name: Option<String>,
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "exterior", skip_serializing_if = "Option::is_none")]
-	pub gml_exterior: Option<Gmlexterior>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct GmlLinearRing {
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "coordinates", skip_serializing_if = "Option::is_none")]
-	pub gml_coordinates: Option<String>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct StStandBasicData {
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "CompleteState", skip_serializing_if = "Option::is_none")]
-	pub st_complete_state: Option<String>,
-	#[serde(rename = "Identifiers", skip_serializing_if = "Option::is_none")]
-	pub st_identifiers: Option<StIdentifiers>,
-	#[serde(rename = "StandNumber", skip_serializing_if = "Option::is_none")]
-	pub st_stand_number: Option<String>,
-	#[serde(rename = "MainGroup", skip_serializing_if = "Option::is_none")]
-	pub st_main_group: Option<String>,
-	#[serde(rename = "SubGroup", skip_serializing_if = "Option::is_none")]
-	pub st_sub_group: Option<String>,
-	#[serde(rename = "FertilityClass", skip_serializing_if = "Option::is_none")]
-	pub st_fertility_class: Option<String>,
-	#[serde(rename = "SoilType", skip_serializing_if = "Option::is_none")]
-	pub st_soil_type: Option<String>,
-	#[serde(rename = "DrainageState", skip_serializing_if = "Option::is_none")]
-	pub st_drainage_state: Option<String>,
-	#[serde(rename = "DevelopmentClass", skip_serializing_if = "Option::is_none")]
-	pub st_development_class: Option<String>,
-	#[serde(rename = "MainTreeSpecies", skip_serializing_if = "Option::is_none")]
-	pub st_main_tree_species: Option<String>,
-	#[serde(rename = "CuttingRestriction", skip_serializing_if = "Option::is_none")]
-	pub st_cutting_restriction: Option<String>,
-	#[serde(rename = "SilvicultureRestriction", skip_serializing_if = "Option::is_none")]
-	pub st_silviculture_restriction: Option<String>,
-	#[serde(rename = "StandBasicDataDate", skip_serializing_if = "Option::is_none")]
-	pub st_stand_basic_data_date: Option<String>,
-	#[serde(rename = "DataSource", skip_serializing_if = "Option::is_none")]
-	pub co_data_source: Option<String>,
-	#[serde(rename = "GrowthPlaceDataSource", skip_serializing_if = "Option::is_none")]
-	pub st_growth_place_data_source: Option<String>,
-	#[serde(rename = "Area", skip_serializing_if = "Option::is_none")]
-	pub st_area: Option<String>,
-	#[serde(rename = "AreaDecrease", skip_serializing_if = "Option::is_none")]
-	pub st_area_decrease: Option<String>,
-	#[serde(rename = "PolygonGeometry", skip_serializing_if = "Option::is_none")]
-	pub gdt_polygon_geometry: Option<GdtPolygonGeometry>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct StSpecialFeatures {
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "SpecialFeature", skip_serializing_if = "Option::is_none")]
-	pub st_special_feature: Option<StSpecialFeature>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct GmlpolygonProperty {
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "Polygon", skip_serializing_if = "Option::is_none")]
-	pub gml_polygon: Option<GmlPolygon>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct StIdentifiers {
-	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
-	pub text: Option<String>,
-	#[serde(rename = "Identifier", skip_serializing_if = "Option::is_none")]
-	pub st_identifier: Option<Vec<StIdentifier>>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -308,10 +195,124 @@ pub struct ForestPropertyData {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct TstTreeStrata {
+pub struct GmlPolygon {
+	#[serde(rename = "@srsName", skip_serializing_if = "Option::is_none")]
+	pub srs_name: Option<String>,
 	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
 	pub text: Option<String>,
-	#[serde(rename = "TreeStratum", skip_serializing_if = "Option::is_none")]
-	pub tst_tree_stratum: Option<Vec<TstTreeStratum>>,
+	#[serde(rename = "exterior", skip_serializing_if = "Option::is_none")]
+	pub gml_exterior: Option<Gmlexterior>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct StSpecialFeatures {
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "SpecialFeature", skip_serializing_if = "Option::is_none")]
+	pub st_special_feature: Option<StSpecialFeature>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct StStandBasicData {
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "CompleteState", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_complete_state: Option<Number>,
+	#[serde(rename = "Identifiers", skip_serializing_if = "Option::is_none")]
+	pub st_identifiers: Option<StIdentifiers>,
+	#[serde(rename = "StandNumber", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_stand_number: Option<Number>,
+	#[serde(rename = "MainGroup", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_main_group: Option<Number>,
+	#[serde(rename = "SubGroup", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_sub_group: Option<Number>,
+	#[serde(rename = "FertilityClass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_fertility_class: Option<Number>,
+	#[serde(rename = "SoilType", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_soil_type: Option<Number>,
+	#[serde(rename = "DrainageState", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_drainage_state: Option<Number>,
+	#[serde(rename = "DevelopmentClass", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_development_class: Option<Number>,
+	#[serde(rename = "MainTreeSpecies", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_main_tree_species: Option<Number>,
+	#[serde(rename = "CuttingRestriction", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_cutting_restriction: Option<Number>,
+	#[serde(rename = "SilvicultureRestriction", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_silviculture_restriction: Option<Number>,
+	#[serde(rename = "StandBasicDataDate", skip_serializing_if = "Option::is_none")]
+	pub st_stand_basic_data_date: Option<String>,
+	#[serde(rename = "DataSource", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub co_data_source: Option<Number>,
+	#[serde(rename = "GrowthPlaceDataSource", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_growth_place_data_source: Option<Number>,
+	#[serde(rename = "Area", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_area: Option<Number>,
+	#[serde(rename = "AreaDecrease", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub st_area_decrease: Option<Number>,
+	#[serde(rename = "PolygonGeometry", skip_serializing_if = "Option::is_none")]
+	pub gdt_polygon_geometry: Option<GdtPolygonGeometry>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct TsTreeStandData {
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "TreeStandDataDate", skip_serializing_if = "Option::is_none")]
+	pub ts_tree_stand_data_date: Option<Vec<TsTreeStandDataDate>>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Gmlexterior {
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "LinearRing", skip_serializing_if = "Option::is_none")]
+	pub gml_linear_ring: Option<GmlLinearRing>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct StStand {
+	#[serde(rename = "@id")]
+	pub id: String,
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "StandBasicData", skip_serializing_if = "Option::is_none")]
+	pub st_stand_basic_data: Option<StStandBasicData>,
+	#[serde(rename = "TreeStandData", skip_serializing_if = "Option::is_none")]
+	pub ts_tree_stand_data: Option<TsTreeStandData>,
+	#[serde(rename = "SpecialFeatures", skip_serializing_if = "Option::is_none")]
+	pub st_special_features: Option<StSpecialFeatures>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct GmlPoint {
+	#[serde(rename = "@srsName", skip_serializing_if = "Option::is_none")]
+	pub srs_name: Option<String>,
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "coordinates", skip_serializing_if = "Option::is_none")]
+	pub gml_coordinates: Option<String>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct StSpecialFeature {
+	#[serde(rename = "@id")]
+	pub id: String,
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "MainFeature", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub sf_main_feature: Option<Number>,
+	#[serde(rename = "FeatureCode", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub sf_feature_code: Option<Number>,
+	#[serde(rename = "FeatureAdditionalCode", deserialize_with = "deserialize_optional_number", skip_serializing_if = "Option::is_none", default)]
+	pub sf_feature_additional_code: Option<Number>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct GmlLinearRing {
+	#[serde(rename = "$text", skip_serializing_if = "Option::is_none")]
+	pub text: Option<String>,
+	#[serde(rename = "coordinates", skip_serializing_if = "Option::is_none")]
+	pub gml_coordinates: Option<String>,
 }
 
