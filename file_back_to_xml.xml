@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Generated with schema_generator 0.2.5-->
-<ForestPropertyData xmlns:st="http://standardit.tapio.fi/schemas/forestData/Stand" xmlns:xlink="http://www.w3.org/1999/xlink" schemaPackageSubversion="V20.01" schemaPackageVersion="V20" xmlns:tss="http://standardit.tapio.fi/schemas/forestData/treeStandSummary" xmlns:tst="http://standardit.tapio.fi/schemas/forestData/treeStratum" xmlns:gml="http://www.opengis.net/gml" xmlns:dts="http://standardit.tapio.fi/schemas/forestData/deadTreeStrata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://standardit.tapio.fi/schemas/forestData" schemaLocation="http://standardit.tapio.fi/schemas/forestData ForestData.xsd" xmlns:co="http://standardit.tapio.fi/schemas/forestData/common" xmlns:gdt="http://standardit.tapio.fi/schemas/forestData/common/geometricDataTypes" xmlns:ts="http://standardit.tapio.fi/schemas/forestData/treeStand" xmlns:op="http://standardit.tapio.fi/schemas/forestData/operation" xmlns:sf="http://standardit.tapio.fi/schemas/forestData/specialFeature">
+<!--Generated with schema_generator 0.2.6-->
+<ForestPropertyData xmlns:tss="http://standardit.tapio.fi/schemas/forestData/treeStandSummary" xmlns:op="http://standardit.tapio.fi/schemas/forestData/operation" xmlns:co="http://standardit.tapio.fi/schemas/forestData/common" xmlns:gml="http://www.opengis.net/gml" xmlns:st="http://standardit.tapio.fi/schemas/forestData/Stand" schemaPackageVersion="V20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://standardit.tapio.fi/schemas/forestData" schemaPackageSubversion="V20.01" schemaLocation="http://standardit.tapio.fi/schemas/forestData ForestData.xsd" xmlns:dts="http://standardit.tapio.fi/schemas/forestData/deadTreeStrata" xmlns:gdt="http://standardit.tapio.fi/schemas/forestData/common/geometricDataTypes" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sf="http://standardit.tapio.fi/schemas/forestData/specialFeature" xmlns:ts="http://standardit.tapio.fi/schemas/forestData/treeStand" xmlns:tst="http://standardit.tapio.fi/schemas/forestData/treeStratum">
   <st:Stands>
     <St:Stand id="37339713">
       <st:SpecialFeatures>
@@ -55,7 +55,7 @@
         <st:SubGroup>1</st:SubGroup>
       </st:StandBasicData>
       <ts:TreeStandData>
-        <Ts:TreeStandDataDate type="1" date="2022-08-09">
+        <Ts:TreeStandDataDate date="2022-08-09" type="1">
           <tst:TreeStrata>
             <Tst:TreeStratum id="218518888">
               <tst:Age>112</tst:Age>
@@ -134,7 +134,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate type="3" date="2034-01-01">
+        <Ts:TreeStandDataDate date="2034-01-01" type="3">
           <ts:TreeStandSummary id="125470790">
             <ts:BasalArea>25.8</ts:BasalArea>
             <ts:DevelopmentClass>4</ts:DevelopmentClass>
@@ -228,7 +228,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate date="2024-01-01" type="2">
+        <Ts:TreeStandDataDate type="2" date="2024-01-01">
           <ts:TreeStandSummary id="110415988">
             <ts:BasalArea>14.3</ts:BasalArea>
             <ts:BranchBiomass>12.61</ts:BranchBiomass>
@@ -283,7 +283,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate type="3" date="2034-01-01">
+        <Ts:TreeStandDataDate date="2034-01-01" type="3">
           <ts:TreeStandSummary id="125470802">
             <ts:BasalArea>16.2</ts:BasalArea>
             <ts:DevelopmentClass>4</ts:DevelopmentClass>
@@ -353,7 +353,7 @@
         <st:SubGroup>1</st:SubGroup>
       </st:StandBasicData>
       <ts:TreeStandData>
-        <Ts:TreeStandDataDate type="1" date="2022-08-09">
+        <Ts:TreeStandDataDate date="2022-08-09" type="1">
           <tst:TreeStrata>
             <Tst:TreeStratum id="218519336">
               <tst:Age>118</tst:Age>
@@ -377,7 +377,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate date="2024-01-01" type="2">
+        <Ts:TreeStandDataDate type="2" date="2024-01-01">
           <ts:TreeStandSummary id="110416189">
             <ts:BasalArea>16.4</ts:BasalArea>
             <ts:BranchBiomass>14.08</ts:BranchBiomass>
