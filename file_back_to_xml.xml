@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Generated with schema_generator 0.2.6-->
-<ForestPropertyData xmlns:tss="http://standardit.tapio.fi/schemas/forestData/treeStandSummary" xmlns:op="http://standardit.tapio.fi/schemas/forestData/operation" xmlns:co="http://standardit.tapio.fi/schemas/forestData/common" xmlns:gml="http://www.opengis.net/gml" xmlns:st="http://standardit.tapio.fi/schemas/forestData/Stand" schemaPackageVersion="V20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://standardit.tapio.fi/schemas/forestData" schemaPackageSubversion="V20.01" schemaLocation="http://standardit.tapio.fi/schemas/forestData ForestData.xsd" xmlns:dts="http://standardit.tapio.fi/schemas/forestData/deadTreeStrata" xmlns:gdt="http://standardit.tapio.fi/schemas/forestData/common/geometricDataTypes" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sf="http://standardit.tapio.fi/schemas/forestData/specialFeature" xmlns:ts="http://standardit.tapio.fi/schemas/forestData/treeStand" xmlns:tst="http://standardit.tapio.fi/schemas/forestData/treeStratum">
+<!--Generated with schema_generator 0.2.7-->
+<ForestPropertyData schemaPackageSubversion="V20.01" xmlns:co="http://standardit.tapio.fi/schemas/forestData/common" xmlns:gdt="http://standardit.tapio.fi/schemas/forestData/common/geometricDataTypes" xmlns:sf="http://standardit.tapio.fi/schemas/forestData/specialFeature" xmlns:op="http://standardit.tapio.fi/schemas/forestData/operation" xmlns:ts="http://standardit.tapio.fi/schemas/forestData/treeStand" xmlns:tss="http://standardit.tapio.fi/schemas/forestData/treeStandSummary" xmlns:dts="http://standardit.tapio.fi/schemas/forestData/deadTreeStrata" xmlns:st="http://standardit.tapio.fi/schemas/forestData/Stand" xmlns:gml="http://www.opengis.net/gml" schemaLocation="http://standardit.tapio.fi/schemas/forestData ForestData.xsd" xmlns:tst="http://standardit.tapio.fi/schemas/forestData/treeStratum" schemaPackageVersion="V20" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://standardit.tapio.fi/schemas/forestData">
   <st:Stands>
     <St:Stand id="37339713">
       <st:SpecialFeatures>
@@ -228,7 +228,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate type="2" date="2024-01-01">
+        <Ts:TreeStandDataDate date="2024-01-01" type="2">
           <ts:TreeStandSummary id="110415988">
             <ts:BasalArea>14.3</ts:BasalArea>
             <ts:BranchBiomass>12.61</ts:BranchBiomass>
@@ -377,7 +377,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate type="2" date="2024-01-01">
+        <Ts:TreeStandDataDate date="2024-01-01" type="2">
           <ts:TreeStandSummary id="110416189">
             <ts:BasalArea>16.4</ts:BasalArea>
             <ts:BranchBiomass>14.08</ts:BranchBiomass>
