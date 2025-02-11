@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Generated with schema_generator 0.2.7-->
-<ForestPropertyData schemaPackageSubversion="V20.01" xmlns:co="http://standardit.tapio.fi/schemas/forestData/common" xmlns:gdt="http://standardit.tapio.fi/schemas/forestData/common/geometricDataTypes" xmlns:sf="http://standardit.tapio.fi/schemas/forestData/specialFeature" xmlns:op="http://standardit.tapio.fi/schemas/forestData/operation" xmlns:ts="http://standardit.tapio.fi/schemas/forestData/treeStand" xmlns:tss="http://standardit.tapio.fi/schemas/forestData/treeStandSummary" xmlns:dts="http://standardit.tapio.fi/schemas/forestData/deadTreeStrata" xmlns:st="http://standardit.tapio.fi/schemas/forestData/Stand" xmlns:gml="http://www.opengis.net/gml" schemaLocation="http://standardit.tapio.fi/schemas/forestData ForestData.xsd" xmlns:tst="http://standardit.tapio.fi/schemas/forestData/treeStratum" schemaPackageVersion="V20" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://standardit.tapio.fi/schemas/forestData">
+<!--Generated with schema_generator 0.2.8-->
+<ForestPropertyData xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaPackageVersion="V20" xmlns:gdt="http://standardit.tapio.fi/schemas/forestData/common/geometricDataTypes" xmlns:dts="http://standardit.tapio.fi/schemas/forestData/deadTreeStrata" schemaPackageSubversion="V20.01" xmlns:st="http://standardit.tapio.fi/schemas/forestData/Stand" xmlns:sf="http://standardit.tapio.fi/schemas/forestData/specialFeature" xmlns:tss="http://standardit.tapio.fi/schemas/forestData/treeStandSummary" xmlns:op="http://standardit.tapio.fi/schemas/forestData/operation" xmlns:tst="http://standardit.tapio.fi/schemas/forestData/treeStratum" schemaLocation="http://standardit.tapio.fi/schemas/forestData ForestData.xsd" xmlns:ts="http://standardit.tapio.fi/schemas/forestData/treeStand" xmlns:co="http://standardit.tapio.fi/schemas/forestData/common" xmlns="http://standardit.tapio.fi/schemas/forestData" xmlns:gml="http://www.opengis.net/gml">
   <st:Stands>
     <St:Stand id="37339713">
       <st:SpecialFeatures>
@@ -79,7 +79,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate type="2" date="2024-01-01">
+        <Ts:TreeStandDataDate date="2024-01-01" type="2">
           <ts:TreeStandSummary id="110415979">
             <ts:BasalArea>24.5</ts:BasalArea>
             <ts:BranchBiomass>21.9</ts:BranchBiomass>
@@ -204,7 +204,7 @@
         <st:SubGroup>1</st:SubGroup>
       </st:StandBasicData>
       <ts:TreeStandData>
-        <Ts:TreeStandDataDate date="2022-08-09" type="1">
+        <Ts:TreeStandDataDate type="1" date="2022-08-09">
           <tst:TreeStrata>
             <Tst:TreeStratum id="218518909">
               <tst:Age>109</tst:Age>
@@ -283,7 +283,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate date="2034-01-01" type="3">
+        <Ts:TreeStandDataDate type="3" date="2034-01-01">
           <ts:TreeStandSummary id="125470802">
             <ts:BasalArea>16.2</ts:BasalArea>
             <ts:DevelopmentClass>4</ts:DevelopmentClass>
@@ -353,7 +353,7 @@
         <st:SubGroup>1</st:SubGroup>
       </st:StandBasicData>
       <ts:TreeStandData>
-        <Ts:TreeStandDataDate date="2022-08-09" type="1">
+        <Ts:TreeStandDataDate type="1" date="2022-08-09">
           <tst:TreeStrata>
             <Tst:TreeStratum id="218519336">
               <tst:Age>118</tst:Age>
@@ -432,7 +432,7 @@
             </tst:TreeStratum>
           </tst:TreeStrata>
         </ts:TreeStandDataDate>
-        <Ts:TreeStandDataDate type="3" date="2034-01-01">
+        <Ts:TreeStandDataDate date="2034-01-01" type="3">
           <ts:TreeStandSummary id="125471060">
             <ts:BasalArea>18.5</ts:BasalArea>
             <ts:DevelopmentClass>4</ts:DevelopmentClass>
